@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  background-image: url("./assets/bg.webp");
+
+  @apply bg-cover bg-center bg-no-repeat;
+}
+
+@keyframes TopToBottom {
+  from {
+    transform: translateY(-30px);
+  }
+}
+
+.animate-ttb {
+  animation: BottomToTop 600ms;
+}
+
+@keyframes BottomToTop {
+  from {
+    transform: translateY(30px);
+  }
+}
+
+.animate-btt {
+  animation: BottomToTop 600ms;
+}
+
+@keyframes RightToLeft {
+  from {
+    transform: translateX(40px);
+  }
+}
+
+.animate-rtl {
+  animation: RightToLeft 600ms;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
